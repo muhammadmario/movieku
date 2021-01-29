@@ -1,0 +1,128 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+.navbar{
+  background-color: black;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  .main{
+    display: flex;
+    h1{
+      margin-left: 60px;
+    }
+  }
+  .search{
+    margin-right: 100px;
+    display: flex;
+    align-items: center;
+    input{
+      border: none;
+      padding: 5px 12px;
+      margin-left: 10px;
+      border-radius: 10px;
+    }
+    i{
+      font-size: 16px;
+    }
+  }
+}
+
+.menu-bars{
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
+  color: white;
+}
+
+.nav-menu{
+  background-color: black;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+}
+
+.nav-menu.active{
+  left: 0;
+  transition: 350ms;
+}
+
+.nav-text{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.nav-text a{
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.nav-text:hover{
+  background-color: #1a83ff;
+}
+
+.nav-menu-items{
+  width: 100%;
+}
+
+.nav-menu-items li span{
+  font-size: 20px;
+  width: 25px;
+}
+
+.nav-menu-items li p{
+  margin-left: 20px;
+}
+
+.navbar-toggle{
+  background-color: black;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+span{
+  margin-left: 16px;
+}
+
+.movieList{
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+    .poster{
+      width: 300px;
+      height: 450px;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+  }
+}
+
