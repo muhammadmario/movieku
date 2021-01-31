@@ -7,17 +7,19 @@ const useFetch = (url) => {
 
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState(null)
+    const [detail, setDetail] = useState([])
+
 
     useEffect(() => {
         async function fetchData() {
             const request = await axios.get(base_url + url)
             setData(request.data.results)
-            console.log(data)
+            setDetail(request.data)
             setLoading(false)
         }
         fetchData()
     }, [url])
-    return { loading, data };
+    return { loading, data, detail };
 }
 
 export default useFetch;

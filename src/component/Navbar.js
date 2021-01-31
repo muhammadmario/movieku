@@ -3,20 +3,18 @@ import { useState } from 'react'
 import { SidebarData } from './SidebarData'
 
 const Navbar = () => {
-
     const [sidebar, setSidebar] = useState(false)
-
     const showSidebar = () => setSidebar(!sidebar)
     return (
         <>
             <div className="navbar">
-                <div class="main">
+                <div className="main">
                     <Link to="#" className="menu-bars">
                         <i class="fas fa-bars" onClick={showSidebar}></i>
                     </Link>
                     <h1>Movieku</h1>
                 </div>
-                <div class="search">
+                <div className="search">
                     <i class="fas fa-search"></i>
                     <input type="text" placeholder="Search movie" />
                 </div>
@@ -35,7 +33,6 @@ const Navbar = () => {
                                 <li key={index} className={item.cName}>
                                     <Link to={item.path}>
                                         <span>{item.icon}</span>
-
                                         <p>{item.title}</p>
                                     </Link>
                                 </li>

@@ -15,6 +15,8 @@
   color: white;
   .main{
     display: flex;
+    justify-content: center;
+    align-items: center;
     h1{
       margin-left: 60px;
     }
@@ -115,14 +117,157 @@ span{
   background-color: black;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
     .poster{
-      width: 300px;
-      height: 450px;
-      overflow: hidden;
+      width: 280px;
+      height: 420px;
+      overflow-y: hidden;
       img{
         width: 100%;
         height: 100%;
+        object-fit: contain;
+        overflow-y: hidden;
+        transition: 450ms;
       }
+      img:hover{
+        transform: scale(1.05);
+        cursor: pointer;
+      } 
+    }
+}
+
+.movie-detail{
+  width: 100vw;
+  height: 90vh;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  .movie-detail-container{
+    height: 80vh;
+    width: 80%;
+    background-color: white;
+    display: flex;
+    border-radius: 20px;
+    .poster{
+      width: 35%;
+      height: 100%;
+      overflow-y: hidden;
+      img{
+        width: 100%;
+        height: 100%;
+        // object-fit: contain;
+      }
+    }
+    .desc{
+      width: 60%;
+      display: flex;
+      padding: 60px 40px;
+      flex-direction: column;
+      line-height: 25px;
+      h2{
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 20px;
+        overflow-y: hidden;
+      }
+      p{
+        span{
+          font-weight: 700;
+          margin: 0;
+        }
+      }
+    }
+    .button-wrapper{
+      width: 5%;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: flex-end;
+      button{
+        border: none;
+        padding: 5px 10px;
+        background-color: black;
+        height: 80px;
+        color: white;
+        font-weight: 700;
+      }
+      button:hover{
+        cursor: pointer;
+        background-color: rgb(43, 43, 43);
+      }
+    }
   }
 }
 
+
+
+@media(max-width:420px){
+  .navbar{
+    height: 70px;
+    .main{
+      h1{
+        visibility: hidden;
+        margin-left: 0px;
+        font-size: 2px;
+      }
+    }
+    .search{
+      margin-right: 20px;
+      input{
+        padding: 4px 8px;
+      }
+      i{
+        font-size: 14px;
+      }
+    }
+  }
+
+  .movieList{
+    .poster{
+      width: 153px;
+      height: 230px;
+    }
+  }
+
+  .movie-detail{
+    .movie-detail-container{
+      flex-direction: column;
+      .poster{
+        width: 100%;
+        height: 40%;
+        padding: 10px;
+        img{
+          object-fit: contain;
+        }
+      }
+      .desc{
+        width: 100%;
+        height: 55%;
+        padding: 10px 10px;
+        justify-content: center;
+        line-height: 20px;
+        h2{
+          font-size: 18px;
+          margin-bottom: 0;
+        }
+        p{
+          font-size: 14px;
+          overflow-y: hidden;
+        }
+      }
+      .button-wrapper{
+        height:5%;
+        width: 100%;
+        justify-content: flex-end;
+        flex-direction: row;
+        button{
+          width: 50%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

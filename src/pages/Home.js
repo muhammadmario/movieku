@@ -1,4 +1,4 @@
-import useFetch from './usefetch'
+import useFetch from '../helper/usefetch'
 import request from '../helper/request'
 import MovieList from '../helper/MovieList';
 
