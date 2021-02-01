@@ -10,12 +10,14 @@ import Action from './pages/Action';
 import Comedy from './pages/Comedy';
 import Romance from './pages/Romance';
 import Documentaries from './pages/Documentaries';
+import Loading from './component/Loading';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Navbar />
+        <Loading />
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/netflix' exact component={Netflix} />

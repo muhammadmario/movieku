@@ -203,6 +203,19 @@ span{
   }
 }
 
+.loading{
+  background-color: black;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img{
+    width: 120px;
+    height: 120px;
+  }
+}
 
 
 @media(max-width:420px){
@@ -269,6 +282,13 @@ span{
           height: 100%;
         }
       }
+    }
+  }
+
+  .loading{
+    img{
+      width: 80px;
+      height: 80px;
     }
   }
 }

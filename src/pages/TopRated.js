@@ -1,13 +1,14 @@
 import useFetch from '../helper/usefetch'
 import request from '../helper/request'
-import MovieList from '../component/MovieList';
+import MovieList from '../component/MovieList'
+import Loading from '../component/Loading'
 
 const TopRated = () => {
     const { data, loading } = useFetch(request.fetchTopRated)
 
     return (
         <div className='top-rated'>
-            {loading && <div>Loading...</div>}
+            {loading && <Loading />}
             {data && <MovieList data={data} />}
         </div>
     );

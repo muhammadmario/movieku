@@ -1,14 +1,15 @@
 import useFetch from '../helper/usefetch'
 import request from '../helper/request'
-import MovieList from '../component/MovieList';
+import MovieList from '../component/MovieList'
+import Loading from '../component/Loading'
 
 const Home = () => {
     const { data, loading } = useFetch(request.fetchTrending)
 
     return (
         <div className='home'>
-            {loading && <div>Loading...</div>}
-            {data && <MovieList data={data}/>}
+            {loading && <Loading />}
+            {data && <MovieList data={data} />}
         </div>
     );
 }
