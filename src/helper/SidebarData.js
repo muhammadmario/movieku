@@ -36,9 +36,15 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
-        title: 'Home',
-        path: '/',
-        icon: <i class="fas fa-fire"></i>,
+        title: 'Romance',
+        path: '/romance',
+        icon: <i class="fas fa-fan"></i>,
         cName: 'nav-text'
     },
+    {
+        title: 'Documentaries',
+        path: '/documentaries',
+        icon: <i class="fas fa-book"></i>,
+        cName: 'nav-text'
+    }
 ]

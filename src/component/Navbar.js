@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import { SidebarData } from './SidebarData'
+import { SidebarData } from '../helper/SidebarData'
 
 const Navbar = () => {
     const [sidebar, setSidebar] = useState(false)

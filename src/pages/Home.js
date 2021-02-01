@@ -1,6 +1,6 @@
 import useFetch from '../helper/usefetch'
 import request from '../helper/request'
-import MovieList from '../helper/MovieList';
+import MovieList from '../component/MovieList';
 
 const Home = () => {
     const { data, loading } = useFetch(request.fetchTrending)

@@ -10,23 +10,29 @@ const MovieDetail = () => {
     const history = useHistory()
 
     return (
-        <div className="movie-detail">
-            <div className="movie-detail-container">
-                <div className="poster">
-                    <img src={base_url_img + detail.poster_path} alt={detail.title} />
-                </div>
-                <div className="desc">
-                    <h2>{detail.title}</h2>
-                    <p>{detail.overview}</p>
-                    <p><span>Release date :</span> {detail.release_date}</p>
-                    <p><span>Status :</span> {detail.status}</p>
-                    <p><span>Vote average :</span> {detail.vote_average}</p>
-                </div>
-                <div className="button-wrapper">
-                    <button onClick={() => history.go(-1)}>Back</button>
-                </div>
-            </div>
+        <div>
+            {loading && <div>Loading...</div>}
+            {detail &&
+                <div className="movie-detail">
+                    <div className="movie-detail-container">
+                        <div className="poster">
+                            <img src={base_url_img + detail.poster_path} alt={detail.title} />
+                        </div>
+                        <div className="desc">
+                            <h2>{detail.title}</h2>
+                            <p>{detail.overview}</p>
+                            <p><span>Release date :</span> {detail.release_date}</p>
+                            <p><span>Status :</span> {detail.status}</p>
+                            <p><span>Vote average :</span> {detail.vote_average}</p>
+                        </div>
+                        <div className="button-wrapper">
+                            <button onClick={() => history.go(-1)}>Back</button>
+                        </div>
+                    </div>
+                </div>}
         </div>
+
+
     );
 }
 
