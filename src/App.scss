@@ -1,50 +1,36 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   overflow-x: hidden;
 }
 
-.navbar{
+.navbar {
   background-color: black;
   height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
-  .main{
+  .main {
     display: flex;
     justify-content: center;
     align-items: center;
-    h1{
+    h1 {
       margin-left: 60px;
-    }
-  }
-  .search{
-    margin-right: 100px;
-    display: flex;
-    align-items: center;
-    input{
-      border: none;
-      padding: 5px 12px;
-      margin-left: 10px;
-      border-radius: 10px;
-    }
-    i{
-      font-size: 16px;
     }
   }
 }
 
-.menu-bars{
+.menu-bars {
   margin-left: 2rem;
   font-size: 2rem;
   background: none;
   color: white;
 }
 
-.nav-menu{
+.nav-menu {
   background-color: black;
   width: 250px;
   height: 100vh;
@@ -57,12 +43,12 @@
   z-index: 99;
 }
 
-.nav-menu.active{
+.nav-menu.active {
   left: 0;
   transition: 350ms;
 }
 
-.nav-text{
+.nav-text {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -71,7 +57,7 @@
   height: 60px;
 }
 
-.nav-text a{
+.nav-text a {
   text-decoration: none;
   color: white;
   font-size: 18px;
@@ -82,24 +68,24 @@
   border-radius: 8px;
 }
 
-.nav-text:hover{
+.nav-text:hover {
   background-color: #1a83ff;
 }
 
-.nav-menu-items{
+.nav-menu-items {
   width: 100%;
 }
 
-.nav-menu-items li span{
+.nav-menu-items li span {
   font-size: 20px;
   width: 25px;
 }
 
-.nav-menu-items li p{
+.nav-menu-items li p {
   margin-left: 20px;
 }
 
-.navbar-toggle{
+.navbar-toggle {
   background-color: black;
   width: 100%;
   height: 80px;
@@ -108,11 +94,11 @@
   align-items: center;
 }
 
-span{
+span {
   margin-left: 16px;
 }
 
-.movieList{
+.movieList {
   width: 100vw;
   height: 100vh;
   background-color: black;
@@ -120,74 +106,96 @@ span{
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-    .poster{
-      width: 280px;
-      height: 420px;
-      overflow-y: hidden;
-      img{
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        overflow-y: hidden;
-        transition: 450ms;
-      }
-      img:hover{
-        transform: scale(1.05);
-        cursor: pointer;
-      } 
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    input {
+      border: none;
+      padding: 5px 12px;
+      width: 400px;
+      height: 40px;
+      margin-left: 10px;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
+    i {
+      font-size: 20px;
+      padding: 2px;
+      color: white;
+      margin-bottom: 20px;
+    }
+  }
+  .poster {
+    width: 280px;
+    height: 420px;
+    overflow-y: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      overflow-y: hidden;
+      transition: 450ms;
+    }
+    img:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+  }
 }
 
-.movie-detail{
+.movie-detail {
   width: 100vw;
   height: 90vh;
   background-color: black;
   justify-content: center;
   align-items: center;
   display: flex;
-  .movie-detail-container{
+  .movie-detail-container {
     height: 80vh;
     width: 80%;
     background-color: white;
     display: flex;
     border-radius: 20px;
-    .poster{
+    .poster {
       width: 35%;
       height: 100%;
       overflow-y: hidden;
-      img{
+      img {
         width: 100%;
         height: 100%;
         // object-fit: contain;
       }
     }
-    .desc{
+    .desc {
       width: 60%;
       display: flex;
       padding: 60px 40px;
       flex-direction: column;
       line-height: 25px;
-      h2{
+      h2 {
         font-size: 24px;
         font-weight: 700;
         text-align: center;
         margin-bottom: 20px;
         overflow-y: hidden;
       }
-      p{
-        span{
+      p {
+        span {
           font-weight: 700;
           margin: 0;
         }
       }
     }
-    .button-wrapper{
+    .button-wrapper {
       width: 5%;
       display: flex;
       flex-direction: column;
       height: 100%;
       justify-content: flex-end;
-      button{
+      button {
         border: none;
         padding: 5px 10px;
         background-color: black;
@@ -195,7 +203,7 @@ span{
         color: white;
         font-weight: 700;
       }
-      button:hover{
+      button:hover {
         cursor: pointer;
         background-color: rgb(43, 43, 43);
       }
@@ -203,7 +211,7 @@ span{
   }
 }
 
-.loading{
+.loading {
   background-color: black;
   width: 100vw;
   height: 90vh;
@@ -211,73 +219,84 @@ span{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  img{
+  img {
     width: 120px;
     height: 120px;
   }
 }
 
-
-@media(max-width:420px){
-  .navbar{
+@media (max-width: 420px) {
+  .navbar {
     height: 70px;
-    .main{
-      h1{
-        visibility: hidden;
-        margin-left: 0px;
-        font-size: 2px;
+    .main {
+      i {
+        font-size: 20px;
       }
-    }
-    .search{
-      margin-right: 20px;
-      input{
-        padding: 4px 8px;
-      }
-      i{
-        font-size: 14px;
+      h1 {
+        // visibility: hidden;
+        margin-left: 20px;
+        font-size: 20px;
       }
     }
   }
 
-  .movieList{
-    .poster{
+  .menu-bars {
+    i {
+      font-size: 20px;
+    }
+  }
+
+  .movieList {
+    .search {
+      input {
+        padding: 4px 8px;
+        width: 200px;
+        height: 30px;
+        margin: 6px 0px;
+      }
+      i {
+        font-size: 14px;
+        margin: 6px 9px 6px 0px;
+      }
+    }
+    .poster {
       width: 153px;
       height: 230px;
     }
   }
 
-  .movie-detail{
-    .movie-detail-container{
+  .movie-detail {
+    .movie-detail-container {
       flex-direction: column;
-      .poster{
+      .poster {
         width: 100%;
         height: 40%;
         padding: 10px;
-        img{
+        img {
           object-fit: contain;
         }
       }
-      .desc{
+      .desc {
         width: 100%;
         height: 55%;
         padding: 10px 10px;
         justify-content: center;
         line-height: 20px;
-        h2{
+        h2 {
           font-size: 18px;
           margin-bottom: 0;
         }
-        p{
+        p {
           font-size: 14px;
           overflow-y: hidden;
         }
       }
-      .button-wrapper{
-        height:5%;
+      .button-wrapper {
+        height: 5%;
         width: 100%;
         justify-content: flex-end;
         flex-direction: row;
-        button{
+        button {
           width: 50%;
           height: 100%;
         }
@@ -285,8 +304,8 @@ span{
     }
   }
 
-  .loading{
-    img{
+  .loading {
+    img {
       width: 80px;
       height: 80px;
     }
