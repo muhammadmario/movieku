@@ -5,31 +5,34 @@ import { useState, useEffect } from "react";
 const MovieList = ({ data, setPage, page }) => {
   const base_url_img = "https://image.tmdb.org/t/p/original/";
 
-  const [scrollY, setScrollY] = useState(0);
+  // untuk melihat possisi scroll y
+  //   const [scrollY, setScrollY] = useState(0);
 
-  const logit = () => {
-    setScrollY(window.pageYOffset);
-  };
+  //   const logit = () => {
+  //     setScrollY(window.pageYOffset);
+  //   };
 
-  useEffect(() => {
-    const watchScroll = () => {
-      window.addEventListener("scroll", logit);
-    };
-    watchScroll();
-    return () => {
-      window.removeEventListener("scroll", logit);
-    };
-  });
+  //   useEffect(() => {
+  //     const watchScroll = () => {
+  //       window.addEventListener("scroll", logit);
+  //     };
+  //     watchScroll();
+  //     return () => {
+  //       window.removeEventListener("scroll", logit);
+  //     };
+  //   });
 
-  console.log(scrollY);
+  //   console.log(scrollY);
 
   const handlePrevPage = () => {
     setPage((c) => c - 1);
+    window.scrollTo(0, 0);
   };
 
   const handleNextPage = () => {
     setPage((c) => c + 1);
-    setScrollY(0);
+    // setScrollY(0);
+    window.scrollTo(0, 0);
   };
 
   //   fuse.js
