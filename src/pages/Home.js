@@ -4,12 +4,12 @@ import MovieList from "../component/MovieList";
 import Loading from "../component/Loading";
 
 const Home = () => {
-  const { data, loading } = useFetch(request.fetchTrending);
+  const { data, loading, setPage, page } = useFetch(request.fetchTrending);
 
   return (
     <div className="home">
       {loading && <Loading />}
-      {data && <MovieList data={data} />}
+      {data && <MovieList data={data} setPage={setPage} page={page} />}
     </div>
   );
 };

@@ -7,18 +7,20 @@ const useFetch = (url) => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState("");
   const [detail, setDetail] = useState([]);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     async function fetchData() {
-      const request = await axios.get(base_url + url);
+      const request = await axios.get(`${base_url}${url}&page=${page}`);
       setData(request.data.results);
+      console.log(request.data);
       setDetail(request.data);
       setLoading(false);
     }
     fetchData();
-  }, [url]);
+  }, [url, page]);
 
-  return { loading, data, detail };
+  return { loading, data, detail, setPage, page };
 };
 
 export default useFetch;
